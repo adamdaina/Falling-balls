@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 233241714}
   - component: {fileID: 233241716}
   - component: {fileID: 233241715}
+  - component: {fileID: 233241717}
   m_Layer: 5
   m_Name: BluePlanet
   m_TagString: Untagged
@@ -379,6 +380,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233241713}
   m_CullTransparentMesh: 0
+--- !u!95 &233241717
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233241713}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 630d2f43b65d5fd4f8023ac88ba27d4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &364959569
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +410,7 @@ GameObject:
   - component: {fileID: 364959570}
   - component: {fileID: 364959572}
   - component: {fileID: 364959571}
+  - component: {fileID: 364959573}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -456,6 +477,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364959569}
   m_CullTransparentMesh: 0
+--- !u!95 &364959573
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364959569}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75215cfd5b643dc4782098014637feed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &366965170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1059,7 @@ GameObject:
   - component: {fileID: 1356293234}
   - component: {fileID: 1356293236}
   - component: {fileID: 1356293235}
+  - component: {fileID: 1356293237}
   m_Layer: 5
   m_Name: CreamPlanet
   m_TagString: Untagged
@@ -1081,6 +1122,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356293233}
   m_CullTransparentMesh: 0
+--- !u!95 &1356293237
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356293233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df27c52580ed4f443a3bce7bff570e92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1605081896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2184459678004895734, guid: 7767561af7c179346bed810139da68cb,
