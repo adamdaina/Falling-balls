@@ -29,7 +29,7 @@ public class GlassLine : MonoBehaviour
 
          }
 
-          if (score == 14)
+          if (score == 13)
           {
             StartCoroutine(Next());
           }
@@ -37,7 +37,7 @@ public class GlassLine : MonoBehaviour
 
     IEnumerator Next()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(1.5f);
         //transition.SetTrigger("Start");
         NextLevelObject.SetActive(true);
         //SceneManager.LoadScene(index_win);
