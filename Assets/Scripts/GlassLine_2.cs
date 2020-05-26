@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GlassLine_2 : MonoBehaviour
 {
-    public int index_win;
     private int score = 0;
+    public GameObject glass_2;
+    private int score2 = 0;
     private Text scoreText;
+    private int scoresum;
     public Animator transition;
     public GameObject NextLevelObject;
 
@@ -21,6 +23,7 @@ public class GlassLine_2 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject hitObj = collision.gameObject;
+        scoresum = score + score2;
 
         if (hitObj.tag == "Planet")
         {
@@ -29,7 +32,12 @@ public class GlassLine_2 : MonoBehaviour
 
         }
 
-        if (score == 13)
+        if (hitObj.tag == "Planet")
+        {
+            score2++;
+        }
+
+        if (scoresum == 13)
         {
             StartCoroutine(Next());
         }
