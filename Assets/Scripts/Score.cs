@@ -8,7 +8,6 @@ public class Score : MonoBehaviour
 {
     private int score = 0;
     private Text scoreText;
-    public int index_lose;
 
     void Awake()
     {
@@ -16,15 +15,9 @@ public class Score : MonoBehaviour
         scoreText.text = "0";
     }
 
+    /*
     void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.tag == "SunBomb")
-        {
-            transform.position = new Vector2(0, 100);
-            target.gameObject.SetActive(false);
-            SceneManager.LoadScene("LoseScene2");
-        }
-
         if (target.tag == "Planet")
         {
             target.gameObject.SetActive(false);
@@ -39,5 +32,5 @@ public class Score : MonoBehaviour
         }
 
 
-    }
+    }*/
 }

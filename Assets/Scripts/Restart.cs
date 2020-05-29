@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
+    private int currentSceneInd;
 
     public void RestartLevel()
     {
+        currentSceneInd = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("SavedScene", currentSceneInd);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
 
     }

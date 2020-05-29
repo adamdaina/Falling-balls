@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GlassLine : MonoBehaviour
 {
-    public int index_win;
+    //public int index_win;
     private int score = 0;
-    private Text scoreText;
+    public int highscore;
+    private Text scoreText, highscoreText;
     public Animator transition;
     public GameObject NextLevelObject;
 
@@ -16,6 +17,12 @@ public class GlassLine : MonoBehaviour
     {
         scoreText = GameObject.Find("Score").GetComponent<Text>();
         scoreText.text = "0";
+
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highscore = PlayerPrefs.GetInt("HighScore");
+            //highscoreText.text = highscore.ToString();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,6 +33,7 @@ public class GlassLine : MonoBehaviour
          {
             score++;
             scoreText.text = score.ToString();
+            UpdateHighScore();
 
          }
 
@@ -34,6 +42,19 @@ public class GlassLine : MonoBehaviour
             StartCoroutine(Next());
           }
      }
+
+    public void UpdateHighScore()
+    {
+        if (score > highscore)
+        {
+            highscore = score;
+
+            // there must be text command for highscore
+
+            PlayerPrefs.SetInt("HighScore", highscore);
+
+        }
+    }
 
     IEnumerator Next()
     {
