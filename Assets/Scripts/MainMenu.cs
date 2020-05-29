@@ -2,11 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public Animator transition;
     public int sceneToContinue;
+    public int highscore;
+    private Text highscoreText;
+
+    void Awake()
+    {
+        highscoreText = GameObject.Find("HighScoreText").GetComponent<Text>();
+
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highscore = PlayerPrefs.GetInt("HighScore");
+            highscoreText.text = highscore.ToString();
+        }
+    }
 
     public void PlayGame()
     {

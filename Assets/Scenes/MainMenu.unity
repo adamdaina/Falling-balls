@@ -976,6 +976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1716647562}
   sceneToContinue: 0
+  highscore: 0
 --- !u!1 &1312060082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,17 +1027,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.48379138, b: 0, a: 1}
+  m_Color: {r: 0.98823535, g: 0.9333334, b: 0.12941177, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 60
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 0
     m_MaxSize: 90
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1044,7 +1045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'BEST:'
 --- !u!222 &1312060085
 CanvasRenderer:
   m_ObjectHideFlags: 0
