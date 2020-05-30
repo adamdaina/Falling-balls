@@ -8,8 +8,8 @@ public class MainMenu : MonoBehaviour
 {
     public Animator transition;
     public int sceneToContinue;
-    public int highscore, lastscene;
-    private Text highscoreText, leveltext;
+    public int highscore, lastscene, score;
+    private Text highscoreText, leveltext, scoreText;
 
     void Awake()
     {
@@ -27,11 +27,19 @@ public class MainMenu : MonoBehaviour
             lastscene = PlayerPrefs.GetInt("SavedScene");
             leveltext.text = "LEVEL " + lastscene.ToString();
         }
+
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            score = PlayerPrefs.GetInt("Score");
+            //scoreText.text = "Score: " + score.ToString();
+        }
     }
 
     public void PlayGame()
     {
         sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+        score = 0;
+        PlayerPrefs.SetInt("Score", score);
 
         if (sceneToContinue != 0)
         {

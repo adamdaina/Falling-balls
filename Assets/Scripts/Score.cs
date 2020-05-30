@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
-    private int score = 0;
-    private Text scoreText;
+    
 
-    void Awake()
+    /*oid Awake()
     {
         scoreText = GameObject.Find ("Score").GetComponent<Text>();
         scoreText.text = "0";
-    }
+    }*/
 
     /*
     void OnTriggerEnter2D(Collider2D target)

@@ -7,21 +7,28 @@ using UnityEngine.SceneManagement;
 public class GlassLine : MonoBehaviour
 {
     //public int index_win;
-    private int score = 0;
-    public int highscore;
+
+    private int privatscore = 0;
+    public int score, highscore;
     private Text scoreText, highscoreText;
+
     public Animator transition;
     public GameObject NextLevelObject;
 
     void Awake()
     {
-        scoreText = GameObject.Find("Score").GetComponent<Text>();
-        scoreText.text = "0";
+         scoreText = GameObject.Find("Score").GetComponent<Text>();
 
         if (PlayerPrefs.HasKey("HighScore"))
         {
             highscore = PlayerPrefs.GetInt("HighScore");
             //highscoreText.text = highscore.ToString();
+        }
+
+       if (PlayerPrefs.HasKey("Score"))
+        {
+            score = PlayerPrefs.GetInt("Score");
+            scoreText.text = "Score: " + score.ToString();
         }
     }
 
@@ -31,28 +38,29 @@ public class GlassLine : MonoBehaviour
 
          if (hitObj.tag == "Planet")
          {
+            privatscore++;
             score++;
-            scoreText.text = score.ToString();
             UpdateHighScore();
 
          }
 
-          if (score == 13)
-          {
+         if (privatscore == 13)
+         {
             StartCoroutine(Next());
-          }
+         }
+        
+        
      }
 
     public void UpdateHighScore()
     {
+        PlayerPrefs.SetInt("Score", score);
+
         if (score > highscore)
         {
             highscore = score;
-
-            // there must be text command for highscore
-
-            PlayerPrefs.SetInt("HighScore", highscore);
-
+              
+            PlayerPrefs.SetInt("HighScore", highscore);       
         }
     }
 

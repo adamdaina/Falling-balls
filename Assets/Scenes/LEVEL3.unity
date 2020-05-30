@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -451,8 +451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03fe7ae30d37430b9d447346a635c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index_lose: 8
   GameOverMenu: {fileID: 1270570189}
+  score: 0
 --- !u!4 &332801825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2184459678004895734, guid: 7767561af7c179346bed810139da68cb,
@@ -1076,7 +1076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26296da6f53ab4595a99bc1144b94aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index_win: 9
+  score: 0
+  highscore: 0
   transition: {fileID: 0}
   NextLevelObject: {fileID: 1332906123}
 --- !u!68 &679190614
@@ -1474,8 +1475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03fe7ae30d37430b9d447346a635c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index_lose: 8
   GameOverMenu: {fileID: 1270570189}
+  score: 0
 --- !u!1 &882127420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2169,6 @@ GameObject:
   - component: {fileID: 1294145867}
   - component: {fileID: 1294145866}
   - component: {fileID: 1294145865}
-  - component: {fileID: 1294145864}
   m_Layer: 0
   m_Name: Ground_2
   m_TagString: Untagged
@@ -2190,18 +2190,6 @@ Transform:
   m_Father: {fileID: 1353898067}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -3.0000002, y: -0.28500003, z: 25.457}
---- !u!114 &1294145864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294145862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9e0c7662498584498e82141e9d71603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1294145865
 Rigidbody2D:
   serializedVersion: 4
@@ -3462,10 +3450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
