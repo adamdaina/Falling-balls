@@ -464,7 +464,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverMenu: {fileID: 1739346455}
-  score: 0
 --- !u!1 &352217635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1465,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverMenu: {fileID: 1739346455}
-  score: 0
 --- !u!1 &882127420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,6 +2493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09edf2fff63ec4172afd87d2d769fe23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &1524394484
 GameObject:
   m_ObjectHideFlags: 0

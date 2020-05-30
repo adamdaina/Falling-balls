@@ -6,40 +6,65 @@ using UnityEngine.SceneManagement;
 
 public class GlassLine_2 : MonoBehaviour
 {
-    private int score = 0;
-    public GameObject glass_2;
-    private int score2 = 0;
-    private Text scoreText;
-    private int scoresum;
+    private int privatscore = 0;
+    public int score, highscore, score2;
+    private Text scoreText, highscoreText;
+
     public Animator transition;
     public GameObject NextLevelObject;
 
     void Awake()
     {
         scoreText = GameObject.Find("Score").GetComponent<Text>();
-        scoreText.text = "0";
+
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highscore = PlayerPrefs.GetInt("HighScore");
+            //highscoreText.text = highscore.ToString();
+        }
+
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            score = PlayerPrefs.GetInt("Score");
+
+        }
+
+        if (PlayerPrefs.HasKey("Score2"))
+        {
+            score2 = PlayerPrefs.GetInt("Score2");
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject hitObj = collision.gameObject;
-        scoresum = score + score2;
 
         if (hitObj.tag == "Planet")
         {
+            privatscore++;
             score++;
-            scoreText.text = score.ToString();
-
+            UpdateHighScore();
+            scoreText.text = "Score: " + score.ToString();
         }
 
-        if (hitObj.tag == "Planet")
-        {
-            score2++;
-        }
-
-        if (scoresum == 13)
+        if (privatscore + score2 == 13)
         {
             StartCoroutine(Next());
+        }
+
+
+    }
+
+    public void UpdateHighScore()
+    {
+        PlayerPrefs.SetInt("Score", score);
+
+        if (score > highscore)
+        {
+            highscore = score;
+
+            PlayerPrefs.SetInt("HighScore", highscore);
         }
     }
 

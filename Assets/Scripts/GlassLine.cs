@@ -28,7 +28,7 @@ public class GlassLine : MonoBehaviour
        if (PlayerPrefs.HasKey("Score"))
         {
             score = PlayerPrefs.GetInt("Score");
-            scoreText.text = "Score: " + score.ToString();
+            
         }
     }
 
@@ -41,7 +41,7 @@ public class GlassLine : MonoBehaviour
             privatscore++;
             score++;
             UpdateHighScore();
-
+            scoreText.text = "Score: " + score.ToString();
          }
 
          if (privatscore == 13)
