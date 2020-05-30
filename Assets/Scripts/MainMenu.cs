@@ -8,17 +8,24 @@ public class MainMenu : MonoBehaviour
 {
     public Animator transition;
     public int sceneToContinue;
-    public int highscore;
-    private Text highscoreText;
+    public int highscore, lastscene;
+    private Text highscoreText, leveltext;
 
     void Awake()
     {
         highscoreText = GameObject.Find("HighScoreText").GetComponent<Text>();
+        leveltext = GameObject.Find("LevelText").GetComponent<Text>();
 
         if (PlayerPrefs.HasKey("HighScore"))
         {
             highscore = PlayerPrefs.GetInt("HighScore");
-            highscoreText.text = highscore.ToString();
+            highscoreText.text = "BEST: " + highscore.ToString();
+        }
+
+        if (PlayerPrefs.HasKey("SavedScene"))
+        {
+            lastscene = PlayerPrefs.GetInt("SavedScene");
+            leveltext.text = "LEVEL " + lastscene.ToString();
         }
     }
 
